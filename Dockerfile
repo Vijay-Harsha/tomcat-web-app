@@ -1,5 +1,11 @@
-FROM tomcat:8.0.20-jre8
-MAINTAINER Vijay Thakur <vijaythakur0903.com>
-EXPOSE 8080
+FROM tomcat:10.1-jdk21-temurin
+
+LABEL maintainer="Vijay Thakur <vijaythakur0903.com>"
+
+RUN rm -rf /usr/local/tomcat/webapps/*
+
 COPY target/maven-web-app.war /usr/local/tomcat/webapps/maven-web-app.war
 
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
