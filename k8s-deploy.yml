@@ -1,37 +1,43 @@
----
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
- name: mavenwebappdeployment
+  name: tomcat-deployment
+
 spec:
- replicas: 2
- strategy: 
-    type: Recreate
- selector: 
-   matchLabels: 
-     app: mavenwebapp
- template:
-  metadata:
-   name: mavenwebapppod
-   labels:
-     app: mavenwebapp	 
-  spec: 
-    containers:
-    - name: mavenwebappcontainer
-      image: ashokit/mavenwebapp
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 8080
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: tomcat-app
+
+  template:
+    metadata:
+      labels:
+        app: tomcat-app
+
+    spec:
+      containers:
+      - name: tomcat-container
+        image: vjayht/tomcat-web-app:latest
+
+        ports:
+        - containerPort: 8080
+
 ---
 apiVersion: v1
 kind: Service
+
 metadata:
- name: mavenwebappsvc
+  name: tomcat-service
+
 spec:
-  type: LoadBalancer
+  type: NodePort
+
   selector:
-   app: mavenwebapp
+    app: tomcat-app
+
   ports:
-   - port: 80
-     targetPort: 8080
-...
+  - port: 8080
+    targetPort: 8080
+    nodePort: 30080
