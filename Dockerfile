@@ -1,6 +1,6 @@
 FROM tomcat:10.1-jdk21-temurin
 
-LABEL maintainer="Vijayanusaya <vijayanusaya.com>"
+LABEL maintainer="Vijayanusaya Thakur <vijayanusaya.com>"
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
