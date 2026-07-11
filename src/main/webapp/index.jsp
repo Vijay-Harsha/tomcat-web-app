@@ -49,7 +49,7 @@
 
 <div class="container">
 
-    <h1>Apache Tomcat Deployment Successful 🚀</h1>
+    <h1>Apache Tomcat Deployment on k8s cluster setup 🚀</h1>
 
     <h2>DevOps CI/CD Pipeline Project</h2>
 
