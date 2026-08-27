@@ -60,7 +60,7 @@
 
     <hr>
 
-    <h2>VIJAY THAKUR</h2>
+    <h2>VIJAY HASHA THAKUR</h2>
 
     <p>Mumbai, Maharashtra</p>
 
