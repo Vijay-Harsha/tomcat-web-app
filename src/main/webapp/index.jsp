@@ -2,19 +2,17 @@
     pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Tomcat Deployment k8s cluster</title>
+    <meta charset="UTF-8">
+    <title>Tomcat Deployment k8s cluster</title>
 
-<style>
-    body {
-        background-color: #f4f4f4;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 100px;
-    }
-
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
     .container {
         background: white;
         width: 60%;
