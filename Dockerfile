@@ -2,6 +2,8 @@ FROM tomcat:10.1-jdk21-temurin
 
 LABEL maintainer="Vijayanusaya Thakur <vijayanusaya.com>"
 
+RUN apt-get update && apt-get upgrade -y && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 COPY target/maven-web-app.war /usr/local/tomcat/webapps/maven-web-app.war
