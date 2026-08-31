@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tomcat Deployment k8s-cluster DEMO</title>
+    <title>Tomcat Deployment k8s-cluster </title>
 
     <style>
         body {
