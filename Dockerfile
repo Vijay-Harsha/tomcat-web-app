@@ -1,6 +1,6 @@
 FROM tomcat:10.1-jdk21-temurin
 
-LABEL maintainer="Vijayanusaya Thakur <vijayanusaya.com>"
+LABEL maintainer="Vijay Thakur <vijayanusaya.com>"
 
 RUN apt-get update && apt-get upgrade -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
